@@ -4,10 +4,7 @@ URL = "https://dongdong-119.tistory.com/rss"
 RSS_FEED = feedparser.parse(URL)
 MAX_POST = 5
 
-markdown_text = """
-## ✅ Latest Blog Post
-
-"""  # list of blog posts will be appended here
+markdown_text = """"""
 
 for idx, feed in enumerate(RSS_FEED['entries']):
     if idx > MAX_POST:
