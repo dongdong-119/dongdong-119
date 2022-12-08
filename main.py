@@ -5,11 +5,17 @@ RSS_FEED = feedparser.parse(URL)
 MAX_POST = 5
 
 markdown_text = """
-### Hi, this is Donghui's Github<br/>
-hi, my name is Donghui, and I am web back-end developer. I'm interested in not only programming and web and database technologies but policy environment surroungding them.
+### :hand: Hi, this is Donghui's Github<br/>
+hi, my name is Donghui, and I am web back-end developer. I'm interested in not only web and database technologies but policy environment surroungding them.
 
 <br/><br/><br/>
 
+#### :hammer_and_wrench: Projects
+---
+
+<br/><br/><br/>
+#### :blue_book: latest blog posts
+---
 """
 
 for idx, feed in enumerate(RSS_FEED['entries']):
