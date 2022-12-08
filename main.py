@@ -11,11 +11,9 @@ hi, my name is Donghui, and I am web back-end developer. I'm interested in not o
 <br/><br/><br/>
 
 #### :hammer_and_wrench: Projects
----
 
 <br/><br/><br/>
 #### :blue_book: latest blog posts
----
 """
 
 for idx, feed in enumerate(RSS_FEED['entries']):
