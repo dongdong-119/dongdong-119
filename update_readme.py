@@ -1,24 +1,21 @@
-import feedparser
+import feedparser, time
 
+URL = "https://dongdong-119.tistory.com/rss"
+RSS_FEED = feedparser.parse(URL)
+MAX_POST = 5
 
-url = "https://dongdong-119.tistory.com/rss"
-rss_feed = feedparser.parse(url)
+markdown_text = """
+## ✅ Latest Blog Post
 
+"""  # list of blog posts will be appended here
 
-MAX_NUM = 10
-
-latest_blog_post_list = ""
-
-for idx, feed in enumerate(rss_feed['entries']):
-    if idx > MAX_NUM:
+for idx, feed in enumerate(RSS_FEED['entries']):
+    if idx > MAX_POST:
         break
-    feed_date = feed['published_parsed']
-    latest_blog_post_list += f"[{feed_date.tm_year}/{feed_date.tm_mon}/{feed_date.tm_mday} - {feed['title']}]({feed['link']}) <br>\n"
-
-markdown_text = """기본으로 변하지 않을 READ.md 값"""
-readme_text = f"{markdown_text}{latest_blog_post_list}"
-
-with open("README.md", 'w', encoding='utf-8') as f:
-    f.write(readme_text)
-
-
+    else:
+        feed_date = feed['published_parsed']
+        markdown_text += f"[{time.strftime('%Y/%m/%d', feed_date)} - {feed['title']}]({feed['link']}) <br/>\n"
+        
+f = open("README.md", mode="w", encoding="utf-8")
+f.write(markdown_text)
+f.close()
