@@ -4,7 +4,9 @@ URL = "https://dongdong-119.tistory.com/rss"
 RSS_FEED = feedparser.parse(URL)
 MAX_POST = 5
 
-markdown_text = """ Hi, this is donghui's Github :hand:
+markdown_text = """
+### Hi, this is Donghui's Github<br/>
+hi, my name is Donghui, and I am web back-end developer. I'm interested in not only programming and web and database technologies but policy environment surroungding them.
 """
 
 for idx, feed in enumerate(RSS_FEED['entries']):
