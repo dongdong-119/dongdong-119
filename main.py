@@ -6,7 +6,7 @@ MAX_POST = 5
 
 markdown_text = """
 ### :hand: Hi, this is Donghui's Github<br/>
-hi, my name is Donghui, and I am web back-end developer. I'm interested in not only web and database technologies but policy environment surroungding them.
+hi, my name is Donghui, and I a am web back-end developer. I'm interested in not only web and database technologies but policy environment surroungding them.
 
 <br/><br/><br/>
 
